@@ -1,0 +1,5 @@
+pip install numpy
+pip install matplotlib
+pip install Pillow
+// per poder obrir finestra amb la imatge:
+sudo apt-get install python-tk
