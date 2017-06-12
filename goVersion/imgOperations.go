@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func comparePixels(p []int, q []int) int {
 	numCoincidences := 0
 	for i := 0; i < len(p); i++ {
@@ -26,7 +24,7 @@ func analyzeImg(examplesImg map[string][]imgRGBA, timg imgRGBA) map[string]int {
 
 	for k, imgs := range examplesImg {
 		numCoincidences[k] = 0
-		fmt.Println(k)
+		//fmt.Println(k)
 		for _, img := range imgs {
 			numCoincidences[k] = numCoincidences[k] + compareImgs(img, timg)
 		}

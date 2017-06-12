@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	//first, read the example images
 	examplesImg := readExamples()
@@ -10,6 +12,8 @@ func main() {
 	//fmt.Println(timg)
 
 	numCoincidences := analyzeImg(examplesImg, timg)
-	_ = printSortedMapStringInt(numCoincidences, 0)
-
+	_, result := printSortedMapStringInt(numCoincidences, 0)
+	fmt.Print("The image contains the number: ")
+	c.Green(result)
+	//runServer()
 }

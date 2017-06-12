@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"image"
 	_ "image/png"
 	"io/ioutil"
@@ -41,10 +40,10 @@ func readExamples() map[string][]imgRGBA {
 	//for each image in the directory of example images, read the image and generate the histogram
 	files, _ := ioutil.ReadDir("./images/numbers/")
 	for _, f := range files {
-		fmt.Println("images/numbers/" + f.Name())
+		//fmt.Println("images/numbers/" + f.Name())
 		file := readImage("images/numbers/" + f.Name())
 		numberName := strings.Split(f.Name(), ".")[0]
-		fmt.Println(numberName)
+		//fmt.Println(numberName)
 		examplesImg[numberName] = append(examplesImg[numberName], file)
 	}
 	return examplesImg
